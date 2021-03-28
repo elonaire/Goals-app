@@ -16,10 +16,11 @@ export class GoalComponent implements OnInit {
     new Goal(5,'Solve math homework','Damn Math',new Date(2019,2,14)),
     new Goal(6,'Plot my world domination plan','Cause I am an evil overlord',new Date(2030,3,14)),
   ];
-  
+
   toggleDetails(index){
     console.log('works')
     this.goals[index].showDescription = !this.goals[index].showDescription;
+    console.log('this.goals[index].showDescription', this.goals[index].showDescription);
 
   }
 

@@ -9,8 +9,8 @@ import {Goal} from  '../goal';
   styleUrls: ['./goal-detail.component.css']
 })
 export class GoalDetailComponent implements OnInit {
-   
-  @Input() goal:Goal[];
+
+  @Input() goal:Goal;
   @Output() isComplete = new EventEmitter< boolean >();
 
   goalComplete(complete:boolean){
@@ -22,6 +22,8 @@ export class GoalDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('goal', this.goal);
+
   }
 
 }
